@@ -33,6 +33,10 @@ angular
         templateUrl: 'views/blog.html',
         controller: 'BlogCtrl'
       })
+      .when('/blog/:id', {
+        templateUrl: 'views/blogitem.html',
+        controller: 'BlogitemCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -16,14 +16,15 @@ angular.module('bloggerApp')
     ];
 
     $scope.blogs = [
-    	{id:"1", create_at:"2015-02-13", comments:[{user:'abc',content:'xxxx'}],tags:"angualrjs",title:"第一篇文章", img:"../images/main/1.jpg", content:"第一篇<u>文章第一篇</u>文章第一篇文章第一篇文章"},
-    	{id:"2", create_at:"2015-04-13", comments:[],tags:"html5",title:"第二篇文章", img:"../images/main/2.jpg", content:"第二篇文章第一篇文章第一篇文章第一篇文章"}
+    	{id:"1", create_at:new Date(), comments:[{user:'abc',content:'xxxx'}],tags:"angualrjs",title:"第一篇文章", img:"../images/main/1.jpg", content:"第一篇<u>文章第一篇</u>文章第一篇文章第一篇文章"},
+    	{id:"2", create_at:new Date(), comments:[],tags:"html5",title:"第二篇文章", img:"../images/main/2.jpg", content:"第二篇文章第一篇文章第一篇文章第一篇文章"}
     ];
 
+    $http.get();
     $scope.addBlog = function(){
     	console.log("abc")
     	console.log($scope.title+'.......');
-    	var blog={title: $scope.title, content:$scope.content, id:'1', create_at:'2015-4-16',comments:[],img:"../images/main/3.jpg"};
+    	var blog={title: $scope.title, content:$scope.content, id:'1', create_at:new Date(),comments:[],img:"../images/main/3.jpg"};
 
     	$scope.blogs.push(blog);
 
